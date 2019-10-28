@@ -20,10 +20,10 @@ import java.util.concurrent.TimeUnit
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 
-class API {
+class   API {
 
     companion object {
-        const val BASE_URL = "https://jsonplaceholder.typicode.com/"
+        const val BASE_URL = "https://address-book-exp-api.herokuapp.com/"
         const val ONE_MINUTE = 60L
 
         private fun getService() : Service {
@@ -94,13 +94,13 @@ class API {
 
     interface Service {
 
-        @GET("posts")
+        @GET("users")
         fun getContacts() : Call<ResponseData>
 
-        @GET("posts/{id}")
+        @GET("users/{id}")
         fun getDetail(@Path("id") id: Int) : Call<ContactData>
 
-        @POST("posts")
+        @POST("users")
         fun addPost(@Body hashMap: HashMap<String, String>) : Call<ContactData>
 
         @PATCH("posts/{id}")
