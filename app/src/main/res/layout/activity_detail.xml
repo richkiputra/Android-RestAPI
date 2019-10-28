@@ -6,7 +6,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".activity.DetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:background="#3D7CAD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+              <TextView
+                android:id="@+id/tvSubmit"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:text="16sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                tools:text="Save"/>
+
+            <LinearLayout
+                android:layout_toStartOf="@id/tvSubmit"
+                android:background="#3D7CAD"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back"
+                    android:padding="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="20sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    tools:text="Edit"/>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,8 +70,8 @@
 
         <androidx.cardview.widget.CardView
 
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_margin="@dimen/spacing_l"
             app:cardCornerRadius="125dp"
@@ -64,7 +117,7 @@
             android:layout_marginLeft="@dimen/spacing_l"/>
 
         <EditText
-            android:id="@+id/etName"
+            android:id="@+id/etDetailName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
@@ -82,7 +135,7 @@
             android:layout_marginLeft="@dimen/spacing_l"/>
 
         <EditText
-            android:id="@+id/etPhone"
+            android:id="@+id/etDetailPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
@@ -100,7 +153,8 @@
             android:layout_marginLeft="@dimen/spacing_l"/>
 
         <EditText
-            android:id="@+id/etEmail"
+            android:id="@+id/etDetailEmail"
+            android:inputType="textEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/border"

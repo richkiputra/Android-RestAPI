@@ -22,7 +22,7 @@
 <!--                android:layout_width="match_parent"-->
 <!--                android:layout_height="wrap_content">-->
                 <ImageView
-                    android:id="@+id/ivUser"
+                    android:id="@+id/ivPhoto"
                     android:layout_width="72dp"
                     android:layout_height="72dp"
                     android:src="@drawable/circle" />
@@ -37,6 +37,7 @@
                     android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tvNameContact"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:text="Richki Ranu Putra"
@@ -46,6 +47,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/tvPhoneContact"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
